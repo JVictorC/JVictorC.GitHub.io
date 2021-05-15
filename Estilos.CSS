@@ -1,29 +1,46 @@
+*{
+    margin: 0;
+}
+
 
 .Foto{
     width: 300px;
-    height: 470px;
-    border-radius: 20%;
+    height: 400px;
+    border-radius: 100%;
+    padding: 40px;
     }
     .Name{
+    
     font-size: 35px;
     line-height: 2;
     letter-spacing: -1px;
     font-weight: 600;
-    color: #0b9ea8;
-    }
-    .Icone{
-
-    width: 40px;
-    margin-left: 20px;
+    color:  #ffffff; 
+    display: inline-block;
+    margin-left: 40%;
+   
     
     }
+    .Icone{
+        margin-top: 10px;
+        margin-left: 20PX;
+        width: 50PX;
+        height: 45PX;
+       
+        
+        
+
+    }
+   
     .Divisão{
-    font-size: 30px;
-    color:white;;
-    font-weight: 600;
-    text-align: center;   
+    font-size: 35px;
+    color:white;
+    text-align: center;
     background-color: #0b9ea8;
-    border-radius: 10%;
+    margin-bottom: 20px;
+  
+
+
     }
     .Links_Contatos{
    
@@ -38,14 +55,73 @@
     body{
         font-family:Montserrat, sans-serif;
         font-size: 18px;
-        font-weight:700;
         color: black;
         line-height: 2;
+        /* background-color: #cfcdcd; */
         }
-        p{
-            line-height: 2;
-            font-size: 25px;
-            line-height: 2;
-            color: #064146;
-            font-weight: 600;         
-        }
+   
+
+    #Header{
+        background-color: #0b9ea8;
+       
+    }
+
+    #subHeader{   
+        margin-left: 40px;
+        margin-bottom: 40px;
+     
+        
+    }
+    #Fundo{
+        background: url(Images/Trybe_Capa.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 70%;
+        
+    }
+   
+    .botoes a{
+        
+        display: block;
+        width: 10em;
+        margin: 20px;
+        margin-left: 45%;
+        text-align: center;
+        padding: 15px;
+        border-radius: 10%;
+    }
+
+    #Sobre {
+       color: #0d8b5a;
+       font-weight: 700;
+       width: 100%;
+       margin: 20px;
+       
+    }
+    
+    #Sobre ul{
+
+        margin: 20px;
+        list-style-type: square;
+        
+    }
+    #Sobre p{
+        text-align: center;
+        margin: 20px;
+        font-size: 24px;
+        
+    }
+    #Sobre li{
+
+        margin-left: 45%;
+        list-style-type: square;
+        font-size: 24px;
+        
+    }
+    #LarguraPagina{
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    
+    
+  
