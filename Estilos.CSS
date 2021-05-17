@@ -54,6 +54,11 @@ body{
     width: 200px;
     height: 200px;
     border-radius: 100%;
+    border-top-left-radius: 1%;
+    border: 5px solid white;
+    position: relative;
+    left: 10px;
+    bottom: 20px;
     
 }
 .Icone{
