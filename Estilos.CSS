@@ -9,9 +9,9 @@ body {
 /* Style Header */
 
 .picture {
-  width: 200px;
+  width: 15%;
   display: flex;
-  margin: 5px 15px;
+  margin: 15px 50px;
 }
 
 #container-nav {
@@ -61,7 +61,7 @@ body {
   flex-flow: column wrap;
 }
 .buttons {
-  height: 250px;
+  height: 350px;
   margin: 15px 5px;
   display: flex;
   flex-flow: column;
@@ -82,10 +82,19 @@ body {
 
 /* Style fora do Float */
 
-.vtd-aprender {
+#container-info-features {
   text-align: center;
   width: 90%;
   display: flex;
   flex-flow: column wrap;
   margin: auto;
 }
+
+#container-contacts-project {
+  text-align: center;
+  width: 90%;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+}
+
