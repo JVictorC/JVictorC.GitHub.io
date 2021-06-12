@@ -20,7 +20,7 @@ body {
   align-items: center;
 }
 
-header {
+.header {
   width: 90%;
   background-image: url(Images/Trybe_Capa.jpeg);
   background-size: cover;
@@ -36,6 +36,7 @@ header {
   color: white;
   font-weight: 800;
 }
+
 
 /* Style Float */
 
@@ -77,4 +78,14 @@ header {
   font-weight: 600;
   font-size: 20px;
   cursor: pointer;
+}
+
+/* Style fora do Float */
+
+.vtd-aprender {
+  text-align: center;
+  width: 90%;
+  display: flex;
+  flex-flow: column wrap;
+  margin: auto;
 }
