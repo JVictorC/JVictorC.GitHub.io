@@ -1,14 +1,19 @@
+/* Style Geral */
 
 body {
   background-color: white;
 }
 
+/* Style Info Float */
+
+/* Style Header */
 
 .picture {
   width: 200px;
   display: flex;
   margin: 5px 15px;
 }
+
 #container-nav {
   display: flex;
   flex-flow: column;
@@ -16,7 +21,7 @@ body {
 }
 
 header {
-  width: 80%;
+  width: 90%;
   background-image: url(Images/Trybe_Capa.jpeg);
   background-size: cover;
   background-position: 50%;
@@ -32,19 +37,44 @@ header {
   font-weight: 800;
 }
 
-#container-info {
-  width: 80%;
+/* Style Float */
+
+#container-info-float {
+  width: 90%;
   display: flex;
   flex-flow: row;
   justify-content: space-between;
-  border: 1px solid black;
-
+  margin: 20px 0;
 }
 
-#index {
-  border: 2px solid black;
+.about {
+  width: 70%;
+  text-align: center;
+  display: flex;
+  flex-flow: column wrap;
 }
 
-.botoes {
-  margin: 5px;
+.index {
+  width: 25%;
+  display: flex;
+  flex-flow: column wrap;
+}
+.buttons {
+  height: 250px;
+  margin: 15px 5px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+}
+
+.btn {
+  padding: 5px 20px;
+}
+
+.list-group-item:hover {
+  background-color: #198754;
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+  cursor: pointer;
 }
