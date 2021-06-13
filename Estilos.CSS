@@ -40,15 +40,17 @@ p {
 
 #name {
   display: flex;
-  justify-content: center;
-  text-align: center;
   background: url(Images/Trybe\ 2.png);
   background-repeat: no-repeat;
   background-size: 80px;
   background-position-x: 75%;
   background-position-y: 80%;
+}
+
+#name p {
+  border: none;
+  text-align: center;
   color: white;
-  font-weight: 800;
 }
 
 /* Style Float */
