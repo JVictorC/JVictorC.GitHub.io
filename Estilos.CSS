@@ -1,206 +1,240 @@
+/* Style Geral */
 
-/* Style Projeto */
-*{  
-    margin: 0px;
-    padding: 0px;
-}
-body{
-    
-    font-family: montserrat;
-    letter-spacing: -1px;
-    line-height: 40px;
-    font-size: 18px;
-    font-weight: 400;
-    margin: 20px;
-    background-color: #c9c9c9;
-
-}
-#Principal{
-    width: 1000px;
-    margin: auto;
-    background-color: #f5f5f5;
-    border: 4px solid #11a36a;
-    
-   
-}
-#Header{
-    background: #11a36a url(Images/Trybe_Capa.jpeg);
-    background-position: 50%;
-    background-size: cover;
-    font-size: 28px;
-    height: 350px;
-    max-height: 350px;
-}
-#Name{
-    /* Tratamento do Nome */
-    display: inline-block;
-    margin-top: 20px;
-    margin-left: 28%;
-    padding: 20px;
-    color: white;
-    font-weight: 600;
-
-    /* Icone ao Lado do Nome Trybe */
-    background: url(Images/Trybe\ 2.png) no-repeat;
-    background-position: 100%;
-    background-size: 25%
-
-
-}
-.Foto{
-    
-    margin-left: 40px;
-    margin-bottom: 30px;
-    width: 200px;
-    height: 200px;
-    border-radius: 100%;
-    border-top-left-radius: 1%;
-    border: 5px solid white;
-    position: relative;
-    left: 10px;
-    bottom: 20px;
-    
-}
-.Icone{
-    width: 40px;
-    margin-left: 10px;
-   
-}
-.Divisão{
-    background-color: #11a36a;
-    color: white;
-    letter-spacing: -1px;
-    font-size: 30px;
-    text-align: center;
-    margin: 20px 10px;
-    padding: 5px;
-    border-radius: 10%;
-    
-    
-}
-.Links_Contatos{
-    /* Formatação de Texto */
-
-    background-color: #11a36a;
-    text-decoration: none;
-    color: white;
-    text-align: center;
-    font-weight: 600;
-    border-radius: 10%;
-
-    /* Posicionamento */
-
-    padding: 10px;
-    width: 300px;
-    margin: auto;
-    margin-bottom: 15px;
-    display: block;
-   
-}
-.botoes{
-    margin: 10px;
-    padding: 20px;
-    
+body {
+  background-color: white;
 }
 
-#Sobre{
-    padding: 30px;
-    margin: 30px;
-
-}
-#Sobre li{
-    margin-top: 20px;
-    list-style-type: square;
-    
+a {
+  text-decoration: none;
+  color: black;
 }
 
-#LinksContatosFoto{
-   
-    background:#11a36a url(Images/Camera.png) no-repeat;
-    background-size: 15% ;
-    background-position: 96% 50%;
-    text-decoration: none;
-    color: white;
-    text-align: center;
-    font-weight: 600;
-    border-radius: 10%;
+p {
+  margin: auto;
+  width: 98%;
+  border-top: 3px dotted black;
+  padding: 25px;
+}
+/* Style Info Float */
 
-    /* Posicionamento */
+/* Style Header */
 
-    padding: 10px;
-    width: 300px;
-    margin: auto;
-    margin-bottom: 15px;
-    display: block; 
+.picture {
+  width: 15%;
+  display: flex;
+  margin: 15px 50px;
 }
 
-#LinksContatosHub{
-   
-    background:#11a36a url(Images/GitHub.png) no-repeat;
-    background-size:20% ;
-    background-position: 100% 50%;
-    text-decoration: none;
-    color: white;
-    text-align: center;
-    font-weight: 600;
-    border-radius: 10%;
-
-    /* Posicionamento */
-
-    padding: 10px;
-    width: 300px;
-    margin: auto;
-    margin-bottom: 15px;
-    display: block; 
+#container-nav {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }
 
-#LinksContatosLinki{
-   
-    background:#11a36a url(Images/LinkiDin.png) no-repeat;
-    background-size:20% ;
-    background-position: 100% 50%;
-    text-decoration: none;
-    color: white;
-    text-align: center;
-    font-weight: 600;
-    border-radius: 10%;
-
-    /* Posicionamento */
-
-    padding: 10px;
-    width: 300px;
-    margin: auto;
-    margin-bottom: 15px;
-    display: block; 
+.header {
+  width: 90%;
+  background-image: url(Images/Trybe_Capa.jpeg);
+  background-size: cover;
+  background-position: 50%;
 }
 
-a:hover{
-    background: white;
-    color:#11a36a;
-    border: 3px solid #11a36a;
+#name {
+  display: flex;
+  justify-content: center;
+  background: url(Images/Trybe\ 2.png);
+  background-repeat: no-repeat;
+  background-position: 75%;
+  color: white;
+  font-weight: 800;
 }
-a:active{
-    
-    font-size: 28px;
+
+/* Style Float */
+
+#container-info-float {
+  width: 90%;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  margin: 20px 0;
 }
-#LinksContatosFoto:hover{
-    background:white url(Images/Camera.png) no-repeat;
-    background-size:18% ;
-    background-position: 96% 50%;
-    color:#11a36a;
-    border: 3px solid #11a36a;
+
+#about {
+  width: 70%;
+  text-align: center;
+  display: flex;
+  flex-flow: column wrap;
 }
-#LinksContatosHub:hover{
-    background:white url(Images/GitHub.png) no-repeat;
-    background-size:25% ;
-    background-position: 100% 50%;
-    color:#11a36a;
-    border: 3px solid #11a36a;
+
+.index {
+  width: 25%;
+  display: flex;
+  flex-flow: column wrap;
 }
-#LinksContatosLinki:hover{
-    background:white url(Images/LinkiDin.png) no-repeat;
-    background-size:25% ;
-    background-position: 100% 50%;
-    color:#11a36a;
-    border: 3px solid #11a36a;
+.buttons {
+  height: 350px;
+  margin: 15px 5px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
 }
+
+.btn-success {
+  transition: 1s;
+}
+
+.btn-success:hover {
+  background: url(Images/Trybe\ 2.png) #fff;
+  background-position: 95%;
+  background-repeat: no-repeat;
+  background-size: 50px;
+  color: #198754;
+  border: 1px solid #198754;
+  font-size: 18px;
+  font-weight: 600;
+
+}
+
+.btn {
+  padding: 5px 20px;
+}
+
+.list-group-item:hover {
+  background-color: #198754;
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Style fora do Float */
+
+#container-info-features {
+  text-align: center;
+  width: 90%;
+  display: flex;
+  flex-flow: column wrap;
+  margin: auto;
+}
+
+#container-contacts-project {
+  text-align: center;
+  width: 90%;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.container-projects {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.container-projects {
+  width: 65%;
+}
+
+.buttons-contatcs {
+  width: 30%;
+  height: 250px;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.buttons-contatcs a {
+  margin: 10px;
+}
+
+.github {
+  background: url(Images/GitHub.png) rgba(0, 0, 0, 0.837);
+  color: white;
+  background-repeat: no-repeat;
+  background-size: 70px;
+  background-position: 90%;
+  transition: 1s;
+}
+
+.github:hover {
+  background: url(Images/GitHub.png) white;
+  color: rgba(0, 0, 0, 0.837);
+  font-size: 18px;
+  font-weight: 600;
+  background-repeat: no-repeat;
+  background-size: 80px;
+  background-position: 90%;
+  border: 2px solid rgba(0, 0, 0, 0.837);
+}
+.linkidin {
+  background: url(Images/LinkiDin.png) #0dcaf0;
+  color: white;
+  background-repeat: no-repeat;
+  background-position: 90%;
+  background-size: 70px;
+  transition: 1s;
+}
+
+.linkidin:hover {
+  background: url(Images/LinkiDin.png) white;
+  color: #0dcaf0;
+  font-size: 18px;
+  font-weight: 600;
+  background-repeat: no-repeat;
+  background-position: 90%;
+  background-size: 80px;
+  border: 2px solid #0dcaf0;
+}
+
+.links {
+  color: black;
+  text-decoration: none;
+  width: 98%;
+  min-height: 30px;
+  padding: 5px;
+  margin: 10px auto;
+  border-bottom: 2px solid rgba(128, 128, 128, 0.414);
+  transition: 1s;
+}
+.links:hover {
+  color: #fff;
+  text-decoration: none;
+  width: 98%;
+  min-height: 30px;
+  padding: 5px;
+  background-color: #198754;
+  margin: 10px auto;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.list-group-item:hover {
+  color: white;
+}
+
+footer {
+  background-color: #198754;
+  width: 90%;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-evenly;
+  color: white;
+  font-weight: 600;
+}
+
+#ul-pontos-relevantes{
+  display: flex;
+  flex-flow: column wrap;
+}
+
+#div-projetos {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+/* #teste {
+  background-color: #9a9a9a29;
+  transition: 1s;
+}
+
+#teste:hover {
+  background-color: #0dcaf0;
+} */
