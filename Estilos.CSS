@@ -9,6 +9,12 @@ a {
   color: black;
 }
 
+p {
+  margin: auto;
+  width: 98%;
+  border-top: 3px dotted black;
+  padding: 25px;
+}
 /* Style Info Float */
 
 /* Style Header */
@@ -72,6 +78,22 @@ a {
   justify-content: space-evenly;
 }
 
+.btn-success {
+  transition: 1s;
+}
+
+.btn-success:hover {
+  background: url(Images/Trybe\ 2.png) #fff;
+  background-position: 95%;
+  background-repeat: no-repeat;
+  background-size: 50px;
+  color: #198754;
+  border: 1px solid #198754;
+  font-size: 18px;
+  font-weight: 600;
+
+}
+
 .btn {
   padding: 5px 20px;
 }
@@ -129,6 +151,7 @@ a {
   background-repeat: no-repeat;
   background-size: 70px;
   background-position: 90%;
+  transition: 1s;
 }
 
 .github:hover {
@@ -147,6 +170,7 @@ a {
   background-repeat: no-repeat;
   background-position: 90%;
   background-size: 70px;
+  transition: 1s;
 }
 
 .linkidin:hover {
@@ -168,6 +192,7 @@ a {
   padding: 5px;
   margin: 10px auto;
   border-bottom: 2px solid rgba(128, 128, 128, 0.414);
+  transition: 1s;
 }
 .links:hover {
   color: #fff;
@@ -177,6 +202,8 @@ a {
   padding: 5px;
   background-color: #198754;
   margin: 10px auto;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .list-group-item:hover {
