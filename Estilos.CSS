@@ -2,6 +2,12 @@
 
 body {
   background-color: white;
+  height: 5000px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 /* Style Info Float */
@@ -37,7 +43,6 @@ body {
   font-weight: 800;
 }
 
-
 /* Style Float */
 
 #container-info-float {
@@ -48,7 +53,7 @@ body {
   margin: 20px 0;
 }
 
-.about {
+#about {
   width: 70%;
   text-align: center;
   display: flex;
@@ -96,5 +101,95 @@ body {
   display: flex;
   flex-flow: wrap;
   justify-content: space-between;
+  margin: 20px 0;
 }
 
+.container-projects {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.container-projects {
+  width: 65%;
+}
+
+.buttons-contatcs {
+  width: 30%;
+  height: 250px;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.buttons-contatcs a {
+  margin: 10px;
+}
+
+.github {
+  background: url(Images/GitHub.png) rgba(0, 0, 0, 0.837);
+  color: white;
+  background-repeat: no-repeat;
+  background-size: 70px;
+  background-position: 90%;
+}
+
+.github:hover {
+  background: url(Images/GitHub.png) white;
+  color: rgba(0, 0, 0, 0.837);
+  font-size: 18px;
+  font-weight: 600;
+  background-repeat: no-repeat;
+  background-size: 80px;
+  background-position: 90%;
+  border: 2px solid rgba(0, 0, 0, 0.837);
+}
+.linkidin {
+  background: url(Images/LinkiDin.png) #0dcaf0;
+  color: white;
+  background-repeat: no-repeat;
+  background-position: 90%;
+  background-size: 70px;
+}
+
+.linkidin:hover {
+  background: url(Images/LinkiDin.png) white;
+  color: #0dcaf0;
+  font-size: 18px;
+  font-weight: 600;
+  background-repeat: no-repeat;
+  background-position: 90%;
+  background-size: 80px;
+  border: 2px solid #0dcaf0;
+}
+
+.links {
+  color: black;
+  text-decoration: none;
+  width: 98%;
+  min-height: 30px;
+  padding: 5px;
+  margin: 10px auto;
+  border-bottom: 2px solid rgba(128, 128, 128, 0.414);
+}
+.links:hover {
+  color: #fff;
+  text-decoration: none;
+  width: 98%;
+  min-height: 30px;
+  padding: 5px;
+  background-color: #198754;
+  margin: 10px auto;
+}
+
+.list-group-item:hover {
+  color: white;
+}
+
+footer {
+  background-color: #198754;
+  width: 90%;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-evenly;
+  color: white;
+  font-weight: 600;
+}

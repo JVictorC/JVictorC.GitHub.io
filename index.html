@@ -30,7 +30,7 @@
       </header>
       <!--Fim Header-->
       <section id="container-info-float">
-        <article class="about border border-5">
+        <article class="border border-5" id="about">
           <h3 class="text-center p-2 m-2 bg-success bg-gradient text-white">
             Sobre Mim ...
           </h3>
@@ -51,30 +51,30 @@
           <h3 class="text-center p-2 m-2 bg-success bg-gradient text-white">
             Pontos que considero relevantes:
           </h3>
-          <ul class="list-group list-group-numbered m-2">
-            <li class="list-group-item">Vontade De Aprender</li>
-            <li class="list-group-item">Foco</li>
-            <li class="list-group-item">Colaboração em Equipe</li>
-          </ul>
+          <a href="#vtd-aprender" class="links">1. Vontade De Aprender</a>
+          <a href="#foco" class="links">2. Foco</a>
+          <a href="#clb-equipe" class="links">3. Colaboração em Equipe</a>
         </article>
         <!--Fim Sobre-->
-
         <nav class="index border border-5">
           <!--Inicio Indice-->
           <h3 class="text-center p-2 m-1 bg-success bg-gradient text-white">
             Indice
           </h3>
           <div class="buttons">
-            <a href="#Contatos" class="btn btn-success">Contatos</a>
-            <a href="#pontoFortes" class="btn btn-success">Sobre Mim ...</a>
-            <a href="#pontoFortes" class="btn btn-success">Projetos</a>
+            <a href="#contacts" class="btn btn-success">Contatos</a>
+            <a href="#about" class="btn btn-success">Sobre Mim ...</a>
+            <a href="#pontos-fonrtes" class="btn btn-success">Projetos</a>
           </div>
         </nav>
       </section>
       <!-- Inicio Container fora do float -->
       <section id="container-info-features">
         <article class="features border border-5">
-          <h3 class="text-center p-2 m-2 bg-success bg-gradient text-white">
+          <h3
+            class="text-center p-2 m-2 bg-success bg-gradient text-white"
+            id="vtd-aprender"
+          >
             Vontade De Aprender:
           </h3>
           <p class="lead mt-3">
@@ -90,7 +90,10 @@
             eu estou indo com calma, estou focado nos conteúdos do dia e me
             importando em aprender.
           </p>
-          <h3 class="text-center p-2 m-2 bg-success bg-gradient text-white">
+          <h3
+            class="text-center p-2 m-2 bg-success bg-gradient text-white"
+            id="foco"
+          >
             Foco:
           </h3>
           <p class="lead mt-3">
@@ -113,7 +116,10 @@
             bibliotecas de JavaScript, eu realmente espero estar lendo isso
             daqui uns 2 anos, pensando como isso é fácil hoje em dia).
           </p>
-          <h3 class="text-center p-2 m-2 bg-success bg-gradient text-white">
+          <h3
+            class="text-center p-2 m-2 bg-success bg-gradient text-white"
+            id="clb-equipe"
+          >
             Colaboração em Equipe:
           </h3>
           <p class="lead mt-3">
@@ -128,14 +134,30 @@
           </p>
         </article>
       </section>
+      <!-- Inicio Project Contatcs -->
       <section id="container-contacts-project">
-        <article>
-          <h1>Contatos</h1>
+        <article class="container-projects border border-5">
+          <h1 class="p-2 m-2 bg-success bg-gradient text-white">Projeto</h1>
+
+          <ul class="list-group list-group-numbered m-2">
+            <li class="list-group-item">Primeiro Projeto</li>
+            <li class="list-group-item">Segundo Projeto</li>
+            <li class="list-group-item">Terceiro Projeto</li>
+          </ul>
         </article>
-        <article>
-          <h1>Projeto</h1>
+        <article class="buttons-contatcs border border-5">
+          <h1 class="p-2 m-2 bg-success bg-gradient text-white" id="contacts">
+            Contatos
+          </h1>
+          <a href="" class="btn github">GitHub</a>
+          <a href="" class="btn linkidin">LinkiDin</a>
         </article>
       </section>
+      <footer class="border border-5">
+        <h2>@JVictorC</h2>
+        <span> <img src="Images/Trybe 2.png" alt="" style="width: 40px;"/> #VQV </span>
+      </footer>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>
