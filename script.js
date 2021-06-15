@@ -12,6 +12,7 @@ window.onload = function () {
   $topicos.click(function toggle(e) {
     $topicos = $(e.currentTarget);
     let $p = $topicos.next();
+    slideUp();
     $p.slideToggle();
   })
   slideUp();
