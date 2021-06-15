@@ -1,8 +1,8 @@
 const divPontosRelevantes = document.getElementById('ul-pontos-relevantes')
 const divButtons = document.getElementsByClassName('buttons')[0];
 let $topicos = $('#container-info-features h3')
-
-
+let $elementPrevius;
+let $angulo;
 
 window.onload = function () {
   divPontosRelevantes.addEventListener('click', changeDiv)
@@ -11,10 +11,24 @@ window.onload = function () {
   // Codigo inspirado em um video visto no Youtube link https://www.youtube.com/watch?v=X6tGovYrQCo&ab_channel=Fl%C3%A1vioCoutinho
   $topicos.click(function toggle(e) {
     $topicos = $(e.currentTarget);
+    let $topicoId = e.currentTarget.id
     let $p = $topicos.next();
-    $p.slideToggle();
+    if ($elementPrevius === $topicoId) {
+      $p.slideToggle();
+      if ($angulo === 0) {
+        toSpinArrow180($topicoId)
+      } else {
+        toSpinArrow0($topicoId)
+      }
+    } else {
+      slideUp();
+      $p.slideToggle();
+      toSpinArrow180($topicoId)
+    }
+    $elementPrevius = $topicoId;
   })
   slideUp();
+  iconDown();
 
 }
 
@@ -64,8 +78,35 @@ function changeDiv(event) {
     let href = elementoAlvo.href.split('#')
     href = href[1];
     pSelect = document.getElementById(href).nextElementSibling
+    $elementPrevius = href;
     slideUp();
-    slideDown(href)
-    changeColor(pSelect)
+    slideDown(href);
+    toSpinArrow180(href);
+    changeColor(pSelect);
   }
+}
+
+
+function iconDown() {
+  const $divPai = $('#container-info-features h3')
+  for (let i = 0; i < $divPai.length; i += 1) {
+    let icon = document.createElement('i')
+    icon.className = "fad fa-angle-double-down ms-3";
+    icon.style.transition = '1s'
+    $divPai[i].append(icon)
+  }
+}
+
+function toSpinArrow180(valueClass) {
+  let $classSelect = $(`#${valueClass} i`)
+  $classSelect.css('transform', ' rotate(180deg)')
+  $angulo = 180;
+
+}
+
+function toSpinArrow0(valueClass) {
+  let $classSelect = $(`#${valueClass} i`)
+  $classSelect.css('transform', ' rotate(0deg)')
+  $angulo = 0;
+
 }
