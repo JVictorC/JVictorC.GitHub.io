@@ -27,6 +27,7 @@ window.onload = function () {
       toSpinArrow180($topicoId)
     }
     $elementPrevius = $topicoId;
+
   })
   slideUp();
   iconDown();
