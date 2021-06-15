@@ -15,6 +15,10 @@ p {
   border-top: 3px dotted black;
   padding: 25px;
 }
+
+.transition {
+  transition: 1s;
+}
 /* Style Info Float */
 
 /* Style Header */
@@ -137,6 +141,11 @@ p {
 
 .container-projects {
   width: 65%;
+}
+
+.projects-fundament {
+  display: flex;
+  flex-flow: column wrap;
 }
 
 .buttons-contatcs {
