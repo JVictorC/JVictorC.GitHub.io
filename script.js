@@ -1,6 +1,7 @@
 const divPontosRelevantes = document.getElementById('ul-pontos-relevantes')
 const divButtons = document.getElementsByClassName('buttons')[0];
 let $topicos = $('#container-info-features h3')
+let $projects = $('#div-projetos h4')
 let $elementPrevius;
 let $angulo;
 
@@ -30,6 +31,13 @@ window.onload = function () {
   slideUp();
   iconDown();
 
+  $projects.click(function toggle(e) {
+    $projects = $(e.currentTarget);
+    let $idProject = e.currentTarget.id
+    let $div = $projects.next();
+    $div.slideToggle();
+    toSpinArrowProjects();
+  })
 }
 
 function slideUp() {
@@ -108,5 +116,21 @@ function toSpinArrow0(valueClass) {
   let $classSelect = $(`#${valueClass} i`)
   $classSelect.css('transform', ' rotate(0deg)')
   $angulo = 0;
+
+}
+
+function toSpinArrowProjects() {
+  let $iSelect = $(`#div-projetos i`)
+  for (let i = 0; i < $iSelect.length; i += 1) {
+    let iTag = $iSelect[i];
+    let tranform = iTag.style.transform
+    if (tranform === 'rotate(0deg)') {
+      iTag.style.transform = ' rotate(180deg)'
+    } else if (tranform === 'rotate(180deg)'){
+      iTag.style.transform = ' rotate(0deg)';
+    } else {
+      iTag.style.transform = ' rotate(180deg)'
+    }
+  }
 
 }
