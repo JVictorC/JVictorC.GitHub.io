@@ -206,13 +206,13 @@ p {
   padding: 5px;
   margin: 10px auto;
   border-bottom: 2px solid rgba(128, 128, 128, 0.414);
-  transition: 1s;
+  transition: 0.5s;
 }
 .links:hover {
   color: #fff;
   text-decoration: none;
   width: 98%;
-  min-height: 30px;
+  min-height: 45px;
   padding: 5px;
   background-color: #198754;
   margin: 10px auto;

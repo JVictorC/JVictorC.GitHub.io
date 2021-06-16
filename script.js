@@ -3,7 +3,6 @@ const divButtons = document.getElementsByClassName('buttons')[0];
 let $topicos = $('#container-info-features h3')
 let $projects = $('#div-projetos h4')
 let $elementPrevius;
-let $angulo;
 
 window.onload = function () {
   divPontosRelevantes.addEventListener('click', changeDiv)
@@ -11,24 +10,25 @@ window.onload = function () {
 
   // Codigo inspirado em um video visto no Youtube link https://www.youtube.com/watch?v=X6tGovYrQCo&ab_channel=Fl%C3%A1vioCoutinho
   $topicos.click(function toggle(e) {
+    resetSpinArros();
     $topicos = $(e.currentTarget);
     let $topicoId = e.currentTarget.id
     let $p = $topicos.next();
+    let p = e.currentTarget.nextElementSibling
+    let $displayP = p.style.display
     if ($elementPrevius === $topicoId) {
       $p.slideToggle();
-      if ($angulo === 0) {
-        toSpinArrow180($topicoId)
-      } else {
-        toSpinArrow0($topicoId)
-      }
     } else {
       slideUp();
       $p.slideToggle();
+    }
+
+    if ($displayP === "none") {
       toSpinArrow180($topicoId)
     }
     $elementPrevius = $topicoId;
-
   })
+
   slideUp();
   iconDown();
 
@@ -84,14 +84,15 @@ function changeDiv(event) {
   let pSelect;
   if (elementoAlvo === divPontosRelevantes) {
   } else {
+    resetSpinArros();
     let href = elementoAlvo.href.split('#')
     href = href[1];
     pSelect = document.getElementById(href).nextElementSibling
     $elementPrevius = href;
     slideUp();
     slideDown(href);
+    $angulo = 180
     toSpinArrow180(href);
-    changeColor(pSelect);
   }
 }
 
@@ -106,19 +107,19 @@ function iconDown() {
   }
 }
 
-function toSpinArrow180(valueClass) {
-  let $classSelect = $(`#${valueClass} i`)
+function toSpinArrow180(valueId) {
+  let $classSelect = $(`#${valueId} i`)
   $classSelect.css('transform', ' rotate(180deg)')
-  $angulo = 180;
-
 }
 
-function toSpinArrow0(valueClass) {
-  let $classSelect = $(`#${valueClass} i`)
-  $classSelect.css('transform', ' rotate(0deg)')
-  $angulo = 0;
-
+function resetSpinArros() {
+  let $iList = $('#container-info-features h3 i')
+  for (let i = 0; i < $iList.length; i++) {
+    let iSelect = $iList[i];
+    iSelect.style.transform = '';
+  }
 }
+
 
 function toSpinArrowProjects() {
   let $iSelect = $(`#div-projetos i`)
@@ -127,7 +128,7 @@ function toSpinArrowProjects() {
     let tranform = iTag.style.transform
     if (tranform === 'rotate(0deg)') {
       iTag.style.transform = ' rotate(180deg)'
-    } else if (tranform === 'rotate(180deg)'){
+    } else if (tranform === 'rotate(180deg)') {
       iTag.style.transform = ' rotate(0deg)';
     } else {
       iTag.style.transform = ' rotate(180deg)'
