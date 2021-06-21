@@ -1,5 +1,9 @@
 
 /* Style Geral */
+* {
+  font-size: 12px;
+}
+
 body {
   background-color: white;
 }
@@ -25,8 +29,9 @@ p {
 
 .picture {
   width: 15%;
+  height: 50%;
   display: flex;
-  margin: 15px 50px;
+  margin: 25px 50px;
 }
 
 #container-nav {
@@ -47,8 +52,9 @@ p {
   background: url(Images/Trybe\ 2.png);
   background-repeat: no-repeat;
   background-size: 80px;
-  background-position-x: 75%;
-  background-position-y: 80%;
+  background-position-x: 100%;
+  width: 600px;
+  margin: auto;
 }
 
 #name p {
@@ -203,21 +209,21 @@ p {
   text-decoration: none;
   width: 98%;
   min-height: 30px;
-  padding: 5px;
+  padding: 10px;
   margin: 10px auto;
-  border-bottom: 2px solid rgba(128, 128, 128, 0.414);
+  border-top: 2px solid rgba(128, 128, 128, 0.414);
   transition: 0.5s;
 }
 .links:hover {
-  color: #fff;
+  color: white;
+  background-color: #198754;
   text-decoration: none;
   width: 98%;
-  min-height: 45px;
-  padding: 5px;
-  background-color: #198754;
+  min-height: 30px;
+  padding: 10px;
   margin: 10px auto;
-  font-size: 18px;
-  font-weight: 600;
+  border-top: 2px solid rgba(128, 128, 128, 0.414);
+  font-size: 20px;
 }
 
 .list-group-item:hover {
@@ -233,6 +239,29 @@ footer {
   color: white;
   font-weight: 600;
 }
+
+.linksProject {
+  color: black;
+  font-weight: 900;
+  text-decoration: none;
+  width: 98%;
+  min-height: 30px;
+  padding: 15px;
+  margin: 15px auto;
+  border: 2px solid rgba(128, 128, 128, 0.414);
+  transition: 0.5s;
+}
+
+.linksProject:hover {
+  background-image: url(Images/Trybe\ 2.png);
+  background-repeat: no-repeat;
+  background-size: 50px;
+  background-position: 90%;
+  font-weight: 600;
+  color: #198754;
+  border: 2px solid rgba(128, 128, 128, 0.414);
+}
+
 
 #ul-pontos-relevantes{
   display: flex;
