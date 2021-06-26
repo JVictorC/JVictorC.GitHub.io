@@ -1,274 +1,125 @@
-
-/* Style Geral */
+/*general Style */
 * {
-  font-size: 12px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: montserrat;
 }
 
 body {
-  background-color: white;
+  background-color: #495057;
 }
 
 a {
   text-decoration: none;
-  color: black;
 }
 
-p {
-  margin: auto;
-  width: 98%;
-  border-top: 3px dotted black;
-  padding: 25px;
+li {
+  list-style: none;
 }
 
-.transition {
-  transition: 1s;
-}
-/* Style Info Float */
-
-/* Style Header */
-
-.picture {
-  width: 15%;
-  height: 50%;
-  display: flex;
-  margin: 25px 50px;
+.white {
+  color: white;
+  font-weight: 600;
 }
 
-#container-nav {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
+/*Media Query for smartPhone*/
+@media screen and (max-width: 700px) {
+
+  /*Header smartPhone*/
+  .header {
+    height: 50px;
+  }
+
+  .header .img-trybe {
+    align-self: center;
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Hero page SmartPhone */
+  .hero-page p {
+    margin: 15px 0px;
+    font-size: 30px;
+  }
 }
 
+/*Media Query for Screen small*/
+@media screen and (min-width: 700px) and (max-width: 1200px) {
+
+  /*Header screen small*/
+  .header .img-trybe {
+    align-self: center;
+    width: 6%;
+    padding: 10px;
+    width: 70px
+  }
+
+  /* Hero Page Screen small*/
+  .hero-page p {
+    font-size: 50px;
+  }
+}
+
+/*Media Query for Screen large*/
+@media screen and (min-width: 1200px) {
+
+  /*Header screen large*/
+  .header .img-trybe {
+    align-self: center;
+    padding: 10px;
+    width: 70px
+  }
+
+  /* Hero Page screen Large*/
+
+  .hero-page{
+    height: 1200px !important;
+  }
+}
+
+/*Header General Medias*/
 .header {
-  width: 90%;
-  background-image: url(Images/Trybe_Capa.jpeg);
+  display: flex;
+  justify-content: space-around;
+  background-color: #343a40;
+  position: fixed;
+  width: 100%;
+}
+
+.header nav {
+  width: 50%;
+  height: 60px;
+  display: flex;
+  align-self: center;
+  justify-content: space-around;
+}
+
+.header a {
+  align-self: center;
+  font-weight: 600;
+  color: white;
+  opacity: 70%;
+  padding: 5px;
+  margin: 15px;
+}
+
+.header a:hover {
+  transition: 0.2s;
+  border-bottom: 5px solid #198754;
+  font-size: 18px;
+  opacity: 100%;
+}
+
+/* About */
+
+.hero-page {
+  background-image: url(Images/HeroPage.jpg);
+  background-position: 100%;
   background-size: cover;
-  background-position: 50%;
-}
-
-#name {
-  display: flex;
-  background: url(Images/Trybe\ 2.png);
-  background-repeat: no-repeat;
-  background-size: 80px;
-  background-position-x: 100%;
-  width: 600px;
-  margin: auto;
-}
-
-#name p {
-  border: none;
-  text-align: center;
-  color: white;
-}
-
-/* Style Float */
-
-#container-info-float {
-  width: 90%;
-  display: flex;
-  flex-flow: row;
-  justify-content: space-between;
-  margin: 20px 0;
-}
-
-#about {
-  width: 70%;
-  text-align: center;
+  height: 100vh;
   display: flex;
   flex-flow: column wrap;
-}
-
-.index {
-  width: 25%;
-  display: flex;
-  flex-flow: column wrap;
-}
-.buttons {
-  height: 350px;
-  margin: 15px 5px;
-  display: flex;
-  flex-flow: column;
-  justify-content: space-evenly;
-}
-
-.btn-success {
-  transition: 1s;
-}
-
-.btn-success:hover {
-  background: url(Images/Trybe\ 2.png) #fff;
-  background-position: 95%;
-  background-repeat: no-repeat;
-  background-size: 50px;
-  color: #198754;
-  border: 1px solid #198754;
-  font-size: 18px;
-  font-weight: 600;
-
-}
-
-.btn {
-  padding: 5px 20px;
-}
-
-.list-group-item:hover {
-  background-color: #198754;
-  color: white;
-  font-weight: 600;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-/* Style fora do Float */
-
-#container-info-features {
-  text-align: center;
-  width: 90%;
-  display: flex;
-  flex-flow: column wrap;
-  margin: auto;
-}
-
-#container-contacts-project {
-  text-align: center;
-  width: 90%;
-  display: flex;
-  flex-flow: wrap;
-  justify-content: space-between;
-  margin: 20px 0;
-}
-
-.container-projects {
-  display: flex;
-  flex-flow: column wrap;
-}
-
-.container-projects {
-  width: 65%;
-}
-
-.projects-fundament {
-  display: flex;
-  flex-flow: column wrap;
-}
-
-.buttons-contatcs {
-  width: 30%;
-  height: 250px;
-  display: flex;
-  flex-flow: column wrap;
-}
-
-.buttons-contatcs a {
-  margin: 10px;
-}
-
-.github {
-  background: url(Images/GitHub.png) rgba(0, 0, 0, 0.837);
-  color: white;
-  background-repeat: no-repeat;
-  background-size: 70px;
-  background-position: 90%;
-  transition: 1s;
-}
-
-.github:hover {
-  background: url(Images/GitHub.png) white;
-  color: rgba(0, 0, 0, 0.837);
-  font-size: 18px;
-  font-weight: 600;
-  background-repeat: no-repeat;
-  background-size: 80px;
-  background-position: 90%;
-  border: 2px solid rgba(0, 0, 0, 0.837);
-}
-.linkidin {
-  background: url(Images/LinkiDin.png) #0dcaf0;
-  color: white;
-  background-repeat: no-repeat;
-  background-position: 90%;
-  background-size: 70px;
-  transition: 1s;
-}
-
-.linkidin:hover {
-  background: url(Images/LinkiDin.png) white;
-  color: #0dcaf0;
-  font-size: 18px;
-  font-weight: 600;
-  background-repeat: no-repeat;
-  background-position: 90%;
-  background-size: 80px;
-  border: 2px solid #0dcaf0;
-}
-
-.links {
-  color: black;
-  text-decoration: none;
-  width: 98%;
-  min-height: 30px;
-  padding: 10px;
-  margin: 10px auto;
-  border-top: 2px solid rgba(128, 128, 128, 0.414);
-  transition: 0.5s;
-}
-.links:hover {
-  color: white;
-  background-color: #198754;
-  text-decoration: none;
-  width: 98%;
-  min-height: 30px;
-  padding: 10px;
-  margin: 10px auto;
-  border-top: 2px solid rgba(128, 128, 128, 0.414);
-  font-size: 20px;
-}
-
-.list-group-item:hover {
-  color: white;
-}
-
-footer {
-  background-color: #198754;
-  width: 90%;
-  display: flex;
-  flex-flow: wrap;
-  justify-content: space-evenly;
-  color: white;
-  font-weight: 600;
-}
-
-.linksProject {
-  color: black;
-  font-weight: 900;
-  text-decoration: none;
-  width: 98%;
-  min-height: 30px;
-  padding: 15px;
-  margin: 15px auto;
-  border: 2px solid rgba(128, 128, 128, 0.414);
-  transition: 0.5s;
-}
-
-.linksProject:hover {
-  background-image: url(Images/Trybe\ 2.png);
-  background-repeat: no-repeat;
-  background-size: 50px;
-  background-position: 90%;
-  font-weight: 600;
-  color: #198754;
-  border: 2px solid rgba(128, 128, 128, 0.414);
-}
-
-
-#ul-pontos-relevantes{
-  display: flex;
-  flex-flow: column wrap;
-}
-
-#div-projetos {
-  display: flex;
-  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
 }
