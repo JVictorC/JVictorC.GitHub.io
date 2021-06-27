@@ -12,13 +12,11 @@ body {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 li {
   list-style: none;
-}
-main {
-  height: 5000px;
 }
 
 .header-sections {
@@ -31,6 +29,7 @@ main {
 .fita-trybe {
   width: 100%;
 }
+
 /*Header General Medias*/
 .header {
   display: flex;
@@ -65,6 +64,7 @@ main {
   opacity: 100%;
 }
 
+
 /* About */
 
 .hero-page {
@@ -87,11 +87,14 @@ main {
 .about {
   display: flex;
   align-items: center;
+  height: 15%;
 }
+
 .about section {
   margin: 5px 20px;
   text-align: center;
 }
+
 .img-jv {
   width: 20%;
 }
@@ -107,6 +110,7 @@ main {
   display: flex;
   flex-flow: column;
 }
+
 .links {
   margin: 15px auto;
   padding: 10px;
@@ -118,6 +122,7 @@ main {
   transition: 0.5s;
   width: 50%;
 }
+
 .links:hover {
   color: white;
   background-color: #198754;
@@ -138,16 +143,167 @@ main {
   text-align: center;
 }
 
-.grids .div-vtd, .div-cle{
+.grids .div-vtd,
+.div-cle {
   width: 48%;
 }
 
 /*Projects*/
-
-.div-projects {
-  background-color: red;
+.project {
+  margin: 0px 15px;
 }
 
+.div-projects {
+  display: flex;
+  width: 100%;
+  flex-flow: wrap;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.div-projects div {
+  border-bottom: 3px solid white;
+  margin: 10px 15px;
+  opacity: 70%;
+  transition: 0.5s;
+}
+
+.div-projects div:hover {
+  border-bottom: 3px solid white;
+  margin: 10px 15px;
+  opacity: 100%;
+}
+
+
+
+.style-title {
+  color: #198754;
+  font-weight: 600;
+  line-height: 10px;
+}
+
+.projects-apresent {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.projects-apresent hr {
+  color: white;
+}
+
+
+.linksProject {
+  color: #198754;
+  font-size: 25px;
+  margin: 25px 15px;
+  padding: 15px;
+  border-bottom: 3px solid white;
+  transition: 0.5s;
+  opacity: 80%;
+}
+
+.linksProject:hover {
+  opacity: 100%;
+  color: white;
+  font-size: 25px;
+  font-weight: 600;
+  border: 3px solid white;
+  background: url(Images/Trybe\ 2.png);
+  background-position: 90%;
+  background-size: 50px;
+  background-repeat: no-repeat;
+}
+
+/*Contatos*/
+#contacts {
+  background-color: #343a40;
+  padding: 30px 15px;
+}
+
+.buttons-contatcs {
+  display: flex;
+  justify-content: space-between;
+  height: 500px;
+}
+
+.buttons-contatcs .lead {
+  font-size: 18px;
+  width: 60%;
+  align-self: center;
+}
+
+.buttons-contatcs .buttons {
+  width: 50%;
+  margin: 0px 15px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+
+
+.buttons .btn-github, .btn-linkedin{
+  align-self: center;
+  text-align: center;
+  margin: 15px;
+  padding: 15px;
+  color: white;
+  font-weight: 600;
+  border: 2px solid white;
+  width: 250px
+
+}
+
+.buttons .btn-github {
+  background: url(Images/GitHub.png);
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: 80px;
+  transition: 0.5s;
+}
+
+.buttons .btn-github:hover {
+  background: url(Images/GitHub.png);
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: 90px;
+  font-size: 20px;
+  background-color: white;
+  color: black;
+}
+
+.buttons .btn-linkedin {
+  background: url(Images/likedin.png);
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: 70px;
+  transition: 0.5s;
+}
+
+.buttons .btn-linkedin:hover {
+  background: url(Images/likedin.png);
+  background-position: 110%;
+  background-repeat: no-repeat;
+  background-size: 80px;
+  font-size: 20px;
+  background-color: white;
+  color: black;
+}
+
+/*Footer*/
+footer {
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer .logo-footer {
+  width: 50px;
+}
+
+footer .icons {
+  margin: 20px;
+}
 /*Media Query for smartPhone*/
 @media screen and (max-width: 700px) {
 
@@ -167,10 +323,13 @@ main {
     margin: 15px 0px;
     font-size: 30px;
   }
+
   /*About*/
   .about {
     flex-flow: column;
+    height: auto;
   }
+
   .about section {
     margin: 5px 0px;
     text-align: center;
@@ -179,18 +338,48 @@ main {
   .about .img-jv {
     width: 50%;
   }
+
   /* Pontos Relevante*/
   .grids {
     display: flex;
     flex-flow: wrap;
     justify-content: space-between;
   }
-  
+
   .grids div {
-    border-bottom: 2px solid  #343a40;
+    border-bottom: 2px solid #343a40;
   }
-  .grids .div-vtd, .div-cle{
+
+  .grids .div-vtd,
+  .div-cle {
     width: 100%;
+  }
+  /*Project*/
+  .div-projects {
+    justify-content: center;
+  }
+  /*Contacts*/
+  .buttons-contatcs .lead {
+    width: 100%;
+    text-align: center;
+  }
+  .buttons-contatcs {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .buttons .btn-github, .btn-linkedin{
+    width: 100%;
+  }
+
+  /*Footer*/
+  footer {
+    justify-content: space-between;
+  }
+  
+  footer .logo-footer {
+    width: 20px;
   }
 }
 
@@ -220,13 +409,16 @@ main {
     padding: 10px;
     width: 70px
   }
+
   /* Hero Page screen Large*/
-  .hero-page{
+  .hero-page {
     height: 1200px !important;
   }
-  .hero-page p{
+
+  .hero-page p {
     font-size: 70px;
   }
+
   /*About*/
   .about .img-jv {
     width: 15%;
