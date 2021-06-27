@@ -329,7 +329,7 @@ footer .icons {
 }
 
 /*Media Query for smartPhone*/
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
 
   /*Header smartPhone*/
   .header {
@@ -421,7 +421,7 @@ footer .icons {
 }
 
 /*Media Query for Screen small*/
-@media screen and (min-width: 700px) and (max-width: 1200px) {
+@media screen and (min-width: 900px) and (max-width: 1200px) {
 
   /*Header screen small*/
   .header .img-trybe {
