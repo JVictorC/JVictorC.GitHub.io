@@ -141,11 +141,18 @@ li {
 
 .grids div {
   text-align: center;
+  cursor: pointer;
 }
 
 .grids .div-vtd,
 .div-cle {
-  width: 48%;
+  width: 49%;
+}
+
+.div-fco {
+  margin: auto;
+  align-self: center;
+  width: 100%;
 }
 
 /*Projects*/

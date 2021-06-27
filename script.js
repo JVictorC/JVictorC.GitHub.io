@@ -1,138 +1,96 @@
-const divPontosRelevantes = document.getElementById('ul-pontos-relevantes')
-const divButtons = document.getElementsByClassName('buttons')[0];
-let $topicos = $('#container-info-features h3')
+let $topicos = $('.grids h1')
 let $projects = $('#div-projetos h4')
+let $listRelevante = $('#pontos-relevantes p')
 let $elementPrevius;
 
 window.onload = function () {
-  divPontosRelevantes.addEventListener('click', changeDiv)
-  divButtons.addEventListener('click', selectDiv)
-
+  // divPontosRelevantes.addEventListener('click', changeDiv)
+  // divButtons.addEventListener('click', selectDiv)
   // Codigo inspirado em um video visto no Youtube link https://www.youtube.com/watch?v=X6tGovYrQCo&ab_channel=Fl%C3%A1vioCoutinho
-  $topicos.click(function toggle(e) {
-    resetSpinArros();
-    $topicos = $(e.currentTarget);
-    let $topicoId = e.currentTarget.id
-    let $p = $topicos.next();
-    let p = e.currentTarget.nextElementSibling
-    let $displayP = p.style.display
-    if ($elementPrevius === $topicoId) {
-      $p.slideToggle();
-    } else {
-      slideUp();
-      $p.slideToggle();
-    }
-
-    if ($displayP === "none") {
-      toSpinArrow180($topicoId)
-    }
-    $elementPrevius = $topicoId;
-  })
 
   slideUp();
-  iconDown();
-
-  $projects.click(function toggle(e) {
-    $projects = $(e.currentTarget);
-    let $idProject = e.currentTarget.id
-    let $div = $projects.next();
-    $div.slideToggle();
-    toSpinArrowProjects();
-  })
+  $topicos.click(toggle)
+  $listRelevante.click(selectDiv)
+  createArrows();
 }
 
-function slideUp() {
-  let $h3 = $('#container-info-features h3')
-  for (let i = 0; i < $h3.length; i++) {
-    let $p = $h3.next()
+const selectDiv = (event) => {
+  let $element = event.currentTarget.id
+  const id = $element.split('#')[1]
+  resetArrows();
+  spinArrow(id)
+  slideUp();
+  slideDown(id)
+
+}
+
+const toggle = (event) => {
+  slideUp();
+  $topicos = $(event.currentTarget);
+  let $p = $topicos.next();
+  const $topicosId = event.currentTarget.id
+  if ($elementPrevius === $topicosId) {
+    let $display = $p.css('display')
+    if ($display === 'none' || $display === '') {
+      slideDown($topicosId)
+    } else {
+      slideUp()
+    }
+    $elementPrevius = $topicosId;
+  } else {
+    slideUp();
+    $p.slideToggle('slow');
+    $elementPrevius = $topicosId;
+  }
+  resetArrows();
+  spinArrow($topicosId)
+}
+
+const slideUp = () => {
+  let $h1 = $('.grids h1')
+  for (let i = 0; i < $h1.length; i++) {
+    let $p = $h1.next()
     $p.slideUp('slow')
   }
 }
 
-function slideDown(value) {
-  let $h3 = $(`#${value}`)
-  for (let i = 0; i < $h3.length; i++) {
-    let $p = $h3.next()
+const slideDown = (value) => {
+  let $h1 = $(`#${value}`)
+  for (let i = 0; i < $h1.length; i++) {
+    let $p = $h1.next()
     $p.slideDown('slow')
   }
 }
 
+const createArrows = () => {
+  const $h1 = $('.grids h1')
+  for (let index = 0; index < $h1.length; index++) {
+    const element = $h1[index];
+    const i = document.createElement('i')
+    i.className = 'fad fa-angle-double-down mx-3'
+    i.style.transition = '1s'
+    element.appendChild(i);
+  }
+}
 
-function selectDiv(event) {
-  const elementoAlvo = event.target
+const resetArrows = () => {
+  const $arrows = $('.grids i')
+  for (let index = 0; index < $arrows.length; index++) {
+    const element = $arrows[index];
+    element.style.transform = 'rotate(0deg)'
+  }
+}
 
-  if (elementoAlvo === divButtons) {
 
+const spinArrow = (h) => {
+  const $iSelect = $(`#${h} i`)
+  const $transformI = $iSelect.css('transform')
+  if ($transformI === 'none' || $transformI === 'matrix(1, 0, 0, 1, 0, 0)') {
+    $iSelect.css('transform', 'rotate(180deg)')
   } else {
-    let href = elementoAlvo.href;
-    href = href.split('#');
-    href = href[1];
-    if (href === 'about') {
-      let divSelecionado = document.getElementById(href)
-      divSelecionado.style.transition = '2s'
-      divSelecionado.style.backgroundColor = '#19875432';
-    } else {
-      let divSelecionado = document.getElementById(href).parentElement
-      divSelecionado.style.transition = '2s'
-      divSelecionado.style.backgroundColor = '#19875432';
-    }
+    $iSelect.css('transform', 'rotate(0deg)')
   }
+  // 'rotate(0deg)'
+  // 'rotate(180deg)'
 }
 
-function changeDiv(event) {
-  const elementoAlvo = event.target;
-  let pSelect;
-  if (elementoAlvo === divPontosRelevantes) {
-  } else {
-    resetSpinArros();
-    let href = elementoAlvo.href.split('#')
-    href = href[1];
-    pSelect = document.getElementById(href).nextElementSibling
-    $elementPrevius = href;
-    slideUp();
-    slideDown(href);
-    $angulo = 180
-    toSpinArrow180(href);
-  }
-}
-
-
-function iconDown() {
-  const $divPai = $('#container-info-features h3')
-  for (let i = 0; i < $divPai.length; i += 1) {
-    let icon = document.createElement('i')
-    icon.className = "fad fa-angle-double-down ms-3";
-    icon.style.transition = '1s'
-    $divPai[i].append(icon)
-  }
-}
-
-function toSpinArrow180(valueId) {
-  let $classSelect = $(`#${valueId} i`)
-  $classSelect.css('transform', ' rotate(180deg)')
-}
-
-function resetSpinArros() {
-  let $iList = $('#container-info-features h3 i')
-  for (let i = 0; i < $iList.length; i++) {
-    let iSelect = $iList[i];
-    iSelect.style.transform = '';
-  }
-}
-
-
-function toSpinArrowProjects() {
-  let $iSelect = $(`#div-projetos i`)
-  for (let i = 0; i < $iSelect.length; i += 1) {
-    let iTag = $iSelect[i];
-    let tranform = iTag.style.transform
-    if (tranform === 'rotate(0deg)') {
-      iTag.style.transform = ' rotate(180deg)'
-    } else if (tranform === 'rotate(180deg)') {
-      iTag.style.transform = ' rotate(0deg)';
-    } else {
-      iTag.style.transform = ' rotate(180deg)'
-    }
-  }
-
-}
