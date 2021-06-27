@@ -2,6 +2,7 @@ let $topicos = $('.grids h1')
 let $projects = $('#div-projetos h4')
 let $listRelevante = $('#pontos-relevantes p')
 let $elementPrevius;
+const sectionCourse = $('.project h2')
 
 window.onload = function () {
   // divPontosRelevantes.addEventListener('click', changeDiv)
@@ -12,6 +13,8 @@ window.onload = function () {
   $topicos.click(toggle)
   $listRelevante.click(selectDiv)
   createArrows();
+  hideProject();
+  sectionCourse.click(showDiv)
 }
 
 const selectDiv = (event) => {
@@ -90,7 +93,6 @@ const resetArrows = () => {
   }
 }
 
-
 const spinArrow = (h) => {
   const $iSelect = $(`#${h} i`)
   const $transformI = $iSelect.css('transform')
@@ -103,3 +105,33 @@ const spinArrow = (h) => {
   // 'rotate(180deg)'
 }
 
+const hideProject = () => {
+  const $projects = $('.divs-Projects')
+  for (let index = 0; index < $projects.length; index++) {
+    const element = $projects[index];
+    element.style.display = 'none'
+
+  }
+}
+
+const showDiv = (event) => {
+  const $elementTagert = event.currentTarget;
+  const divPai = document.querySelector('.project')
+  resetClassSelct();
+  const divErro = document.getElementById('null')
+  $elementTagert.className += ' Select'
+  const divProject = document.getElementById(`${$elementTagert.innerText}`)
+  hideProject();
+  if (divProject === null) {
+    divErro.style.display = 'block'
+  } else {
+    divProject.style.display = 'block'
+    divPai.style.height = 'auto'
+    divErro.style.display = 'none'
+  }
+}
+
+const resetClassSelct = () => {
+  const $classSelects = $('.Select')
+  $classSelects.removeClass('Select')
+}
