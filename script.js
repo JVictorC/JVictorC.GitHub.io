@@ -15,13 +15,17 @@ window.onload = function () {
 }
 
 const selectDiv = (event) => {
-  let $element = event.currentTarget.id
-  const id = $element.split('#')[1]
-  resetArrows();
-  spinArrow(id)
+  let $elementId = event.currentTarget.id
+  const id = $elementId.split('#')[1]
+  const $element = $(`${$elementId}`)
+  const $p = $element.next();
+  const $pDisplay = $p.css('display')
   slideUp();
-  slideDown(id)
-
+  slideDown(id);
+  if ($pDisplay === 'none') {
+    resetArrows();
+    spinArrow(id);
+  }
 }
 
 const toggle = (event) => {
@@ -38,8 +42,13 @@ const toggle = (event) => {
     }
     $elementPrevius = $topicosId;
   } else {
-    slideUp();
-    $p.slideToggle('slow');
+    let teste = $p.css('display')
+    if (teste !== 'none') {
+      slideUp();
+    } else {
+      $p.slideToggle('slow');
+    }
+
     $elementPrevius = $topicosId;
   }
   resetArrows();
