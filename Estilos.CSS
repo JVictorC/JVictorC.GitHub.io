@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #495057;
+  background-color: black;
 }
 
 a {
@@ -17,67 +17,20 @@ a {
 li {
   list-style: none;
 }
-
-.white {
-  color: white;
-  font-weight: 600;
+main {
+  height: 5000px;
 }
 
-/*Media Query for smartPhone*/
-@media screen and (max-width: 700px) {
-
-  /*Header smartPhone*/
-  .header {
-    height: 50px;
-  }
-
-  .header .img-trybe {
-    align-self: center;
-    width: 40px;
-    height: 40px;
-  }
-
-  /* Hero page SmartPhone */
-  .hero-page p {
-    margin: 15px 0px;
-    font-size: 30px;
-  }
+.header-sections {
+  color: #198754;
+  padding: 5px;
+  width: 80%;
+  margin: 5px auto;
 }
 
-/*Media Query for Screen small*/
-@media screen and (min-width: 700px) and (max-width: 1200px) {
-
-  /*Header screen small*/
-  .header .img-trybe {
-    align-self: center;
-    width: 6%;
-    padding: 10px;
-    width: 70px
-  }
-
-  /* Hero Page Screen small*/
-  .hero-page p {
-    font-size: 50px;
-  }
+.fita-trybe {
+  width: 100%;
 }
-
-/*Media Query for Screen large*/
-@media screen and (min-width: 1200px) {
-
-  /*Header screen large*/
-  .header .img-trybe {
-    align-self: center;
-    padding: 10px;
-    width: 70px
-  }
-
-  /* Hero Page screen Large*/
-
-  .hero-page{
-    height: 1200px !important;
-  }
-}
-
 /*Header General Medias*/
 .header {
   display: flex;
@@ -85,6 +38,7 @@ li {
   background-color: #343a40;
   position: fixed;
   width: 100%;
+  opacity: 90%;
 }
 
 .header nav {
@@ -114,7 +68,7 @@ li {
 /* About */
 
 .hero-page {
-  background-image: url(Images/HeroPage.jpg);
+  background-image: url(Images/teste.png);
   background-position: 100%;
   background-size: cover;
   height: 100vh;
@@ -122,4 +76,159 @@ li {
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
+}
+
+.hero-page p {
+  margin: 15px;
+}
+
+/*About */
+
+.about {
+  display: flex;
+  align-items: center;
+}
+.about section {
+  margin: 5px 20px;
+  text-align: center;
+}
+.img-jv {
+  width: 20%;
+}
+
+/*Pontos Relevantes*/
+
+.menu-pontos {
+  text-align: center;
+  background-color: #161a1d;
+}
+
+#pontos-relevantes {
+  display: flex;
+  flex-flow: column;
+}
+.links {
+  margin: 15px auto;
+  padding: 10px;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  border-top: 2px solid rgba(128, 128, 128, 0.414);
+  opacity: 60%;
+  transition: 0.5s;
+  width: 50%;
+}
+.links:hover {
+  color: white;
+  background-color: #198754;
+  font-size: 18px;
+  opacity: 100%;
+  border-radius: 5px;
+}
+
+/*Grid*/
+
+.grids {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+}
+
+.grids div {
+  text-align: center;
+}
+
+.grids .div-vtd, .div-cle{
+  width: 48%;
+}
+
+/*Projects*/
+
+.div-projects {
+  background-color: red;
+}
+
+/*Media Query for smartPhone*/
+@media screen and (max-width: 700px) {
+
+  /*Header smartPhone*/
+  .header {
+    height: 50px;
+  }
+
+  .header .img-trybe {
+    align-self: center;
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Hero page SmartPhone */
+  .hero-page p {
+    margin: 15px 0px;
+    font-size: 30px;
+  }
+  /*About*/
+  .about {
+    flex-flow: column;
+  }
+  .about section {
+    margin: 5px 0px;
+    text-align: center;
+  }
+
+  .about .img-jv {
+    width: 50%;
+  }
+  /* Pontos Relevante*/
+  .grids {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+  }
+  
+  .grids div {
+    border-bottom: 2px solid  #343a40;
+  }
+  .grids .div-vtd, .div-cle{
+    width: 100%;
+  }
+}
+
+/*Media Query for Screen small*/
+@media screen and (min-width: 700px) and (max-width: 1200px) {
+
+  /*Header screen small*/
+  .header .img-trybe {
+    align-self: center;
+    width: 6%;
+    padding: 10px;
+    width: 70px
+  }
+
+  /* Hero Page Screen small*/
+  .hero-page p {
+    font-size: 40px;
+  }
+}
+
+/*Media Query for Screen large*/
+@media screen and (min-width: 1200px) {
+
+  /*Header screen large*/
+  .header .img-trybe {
+    align-self: center;
+    padding: 10px;
+    width: 70px
+  }
+  /* Hero Page screen Large*/
+  .hero-page{
+    height: 1200px !important;
+  }
+  .hero-page p{
+    font-size: 70px;
+  }
+  /*About*/
+  .about .img-jv {
+    width: 15%;
+  }
 }
