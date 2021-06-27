@@ -1,11 +1,13 @@
-
-/* Style Geral */
+/*general Style */
 * {
-  font-size: 12px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: montserrat;
 }
 
 body {
-  background-color: white;
+  background-color: black;
 }
 
 a {
@@ -13,262 +15,449 @@ a {
   color: black;
 }
 
-p {
-  margin: auto;
-  width: 98%;
-  border-top: 3px dotted black;
-  padding: 25px;
+li {
+  list-style: none;
 }
 
-.transition {
-  transition: 1s;
+.Select {
+  opacity: 100% !important;
+  color: white !important;
+  font-size: 30px !important;
+  font-weight: 600 !important;
+  border-bottom:3px solid #198754;
+  padding: 15px 0px !important;
+  transition: 0.5s;
 }
-/* Style Info Float */
 
-/* Style Header */
+.header-sections {
+  color: #198754;
+  padding: 5px;
+  width: 80%;
+  margin: 5px auto;
+}
 
-.picture {
-  width: 15%;
-  height: 50%;
+.fita-trybe {
+  width: 100%;
+}
+
+/*Header General Medias*/
+.header {
   display: flex;
-  margin: 25px 50px;
+  justify-content: space-around;
+  background-color: #343a40;
+  position: fixed;
+  width: 100%;
+  opacity: 90%;
 }
 
-#container-nav {
+.header nav {
+  width: 50%;
+  height: 60px;
   display: flex;
-  flex-flow: column;
+  align-self: center;
+  justify-content: space-around;
+}
+
+.header a {
+  align-self: center;
+  font-weight: 600;
+  color: white;
+  opacity: 70%;
+  padding: 5px;
+  margin: 15px;
+}
+
+.header a:hover {
+  transition: 0.2s;
+  border-bottom: 5px solid #198754;
+  font-size: 18px;
+  opacity: 100%;
+}
+
+
+/* About */
+
+.hero-page {
+  background-image: url(Images/teste.png);
+  background-position: 100%;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
   align-items: center;
 }
 
-.header {
-  width: 90%;
-  background-image: url(Images/Trybe_Capa.jpeg);
-  background-size: cover;
-  background-position: 50%;
+.hero-page p {
+  margin: 15px;
 }
 
-#name {
+/*About */
+
+.about {
   display: flex;
-  background: url(Images/Trybe\ 2.png);
-  background-repeat: no-repeat;
-  background-size: 80px;
-  background-position-x: 100%;
-  width: 600px;
-  margin: auto;
+  align-items: center;
+  height: 15%;
 }
 
-#name p {
-  border: none;
+.about section {
+  margin: 5px 20px;
   text-align: center;
-  color: white;
 }
 
-/* Style Float */
-
-#container-info-float {
-  width: 90%;
-  display: flex;
-  flex-flow: row;
-  justify-content: space-between;
-  margin: 20px 0;
+.img-jv {
+  width: 20%;
 }
 
-#about {
-  width: 70%;
+/*Pontos Relevantes*/
+
+.menu-pontos {
   text-align: center;
-  display: flex;
-  flex-flow: column wrap;
+  background-color: #161a1d;
 }
 
-.index {
-  width: 25%;
-  display: flex;
-  flex-flow: column wrap;
-}
-.buttons {
-  height: 350px;
-  margin: 15px 5px;
+#pontos-relevantes {
   display: flex;
   flex-flow: column;
-  justify-content: space-evenly;
-}
-
-.btn-success {
-  transition: 1s;
-}
-
-.btn-success:hover {
-  background: url(Images/Trybe\ 2.png) #fff;
-  background-position: 95%;
-  background-repeat: no-repeat;
-  background-size: 50px;
-  color: #198754;
-  border: 1px solid #198754;
-  font-size: 18px;
-  font-weight: 600;
-
-}
-
-.btn {
-  padding: 5px 20px;
-}
-
-.list-group-item:hover {
-  background-color: #198754;
-  color: white;
-  font-weight: 600;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-/* Style fora do Float */
-
-#container-info-features {
-  text-align: center;
-  width: 90%;
-  display: flex;
-  flex-flow: column wrap;
-  margin: auto;
-}
-
-#container-contacts-project {
-  text-align: center;
-  width: 90%;
-  display: flex;
-  flex-flow: wrap;
-  justify-content: space-between;
-  margin: 20px 0;
-}
-
-.container-projects {
-  display: flex;
-  flex-flow: column wrap;
-}
-
-.container-projects {
-  width: 65%;
-}
-
-.projects-fundament {
-  display: flex;
-  flex-flow: column wrap;
-}
-
-.buttons-contatcs {
-  width: 30%;
-  height: 250px;
-  display: flex;
-  flex-flow: column wrap;
-}
-
-.buttons-contatcs a {
-  margin: 10px;
-}
-
-.github {
-  background: url(Images/GitHub.png) rgba(0, 0, 0, 0.837);
-  color: white;
-  background-repeat: no-repeat;
-  background-size: 70px;
-  background-position: 90%;
-  transition: 1s;
-}
-
-.github:hover {
-  background: url(Images/GitHub.png) white;
-  color: rgba(0, 0, 0, 0.837);
-  font-size: 18px;
-  font-weight: 600;
-  background-repeat: no-repeat;
-  background-size: 80px;
-  background-position: 90%;
-  border: 2px solid rgba(0, 0, 0, 0.837);
-}
-.linkidin {
-  background: url(Images/LinkiDin.png) #0dcaf0;
-  color: white;
-  background-repeat: no-repeat;
-  background-position: 90%;
-  background-size: 70px;
-  transition: 1s;
-}
-
-.linkidin:hover {
-  background: url(Images/LinkiDin.png) white;
-  color: #0dcaf0;
-  font-size: 18px;
-  font-weight: 600;
-  background-repeat: no-repeat;
-  background-position: 90%;
-  background-size: 80px;
-  border: 2px solid #0dcaf0;
 }
 
 .links {
-  color: black;
-  text-decoration: none;
-  width: 98%;
-  min-height: 30px;
+  margin: 15px auto;
   padding: 10px;
-  margin: 10px auto;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
   border-top: 2px solid rgba(128, 128, 128, 0.414);
+  opacity: 60%;
   transition: 0.5s;
+  width: 50%;
 }
+
 .links:hover {
   color: white;
   background-color: #198754;
-  text-decoration: none;
-  width: 98%;
-  min-height: 30px;
-  padding: 10px;
-  margin: 10px auto;
-  border-top: 2px solid rgba(128, 128, 128, 0.414);
-  font-size: 20px;
+  font-size: 18px;
+  opacity: 100%;
+  border-radius: 5px;
 }
 
-.list-group-item:hover {
-  color: white;
-}
+/*Grid*/
 
-footer {
-  background-color: #198754;
-  width: 90%;
+.grids {
   display: flex;
   flex-flow: wrap;
-  justify-content: space-evenly;
-  color: white;
-  font-weight: 600;
+  justify-content: space-between;
 }
 
-.linksProject {
-  color: black;
-  font-weight: 900;
-  text-decoration: none;
-  width: 98%;
-  min-height: 30px;
-  padding: 15px;
-  margin: 15px auto;
-  border: 2px solid rgba(128, 128, 128, 0.414);
+.grids div {
+  text-align: center;
+  cursor: pointer;
+}
+
+.grids .div-vtd,
+.div-cle {
+  width: 49%;
+}
+
+.div-fco {
+  margin: auto;
+  align-self: center;
+  width: 100%;
+}
+
+/*Projects*/
+.project {
+  margin: 0px 15px;
+  height: 700px;
+}
+
+.div-projects {
+  display: flex;
+  width: 100%;
+  flex-flow: wrap;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.div-projects div {
+  margin: 10px 15px;
+  opacity: 70%;
   transition: 0.5s;
 }
 
-.linksProject:hover {
-  background-image: url(Images/Trybe\ 2.png);
-  background-repeat: no-repeat;
-  background-size: 50px;
-  background-position: 90%;
-  font-weight: 600;
+.div-projects div:hover {
+  margin: 10px 15px;
+  opacity: 100%;
+}
+
+
+
+.style-title {
   color: #198754;
-  border: 2px solid rgba(128, 128, 128, 0.414);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 10px;
+  transition: 0.5s;
 }
 
+.style-title:hover {
+  font-size: 25px;
+  border-bottom: 3px solid white;
+}
 
-#ul-pontos-relevantes{
+.projects-apresent {
   display: flex;
   flex-flow: column wrap;
 }
 
-#div-projetos {
+.projects-apresent hr {
+  color: white;
+}
+
+
+.linksProject {
+  color: #198754;
+  font-size: 25px;
+  margin: 25px 15px;
+  padding: 15px;
+  border-bottom: 3px solid white;
+  transition: 0.5s;
+  opacity: 80%;
+}
+
+.linksProject:hover {
+  opacity: 100%;
+  color: white;
+  font-size: 25px;
+  font-weight: 600;
+  border: 3px solid white;
+  background: url(Images/Trybe\ 2.png);
+  background-position: 90%;
+  background-size: 50px;
+  background-repeat: no-repeat;
+}
+
+/*Contatos*/
+#contacts {
+  background-color: #343a40;
+  padding: 30px 15px;
+}
+
+.buttons-contatcs {
+  display: flex;
+  justify-content: space-between;
+  height: 500px;
+}
+
+.buttons-contatcs .lead {
+  font-size: 18px;
+  width: 60%;
+  align-self: center;
+}
+
+.buttons-contatcs .buttons {
+  width: 50%;
+  margin: 0px 15px;
   display: flex;
   flex-flow: column wrap;
+  justify-content: center;
+}
+
+
+.buttons .btn-github,
+.btn-linkedin {
+  align-self: center;
+  text-align: center;
+  margin: 15px;
+  padding: 15px;
+  color: white;
+  font-weight: 600;
+  border: 2px solid white;
+  width: 250px
+}
+
+.buttons .btn-github {
+  background: url(Images/GitHub.png);
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: 80px;
+  transition: 0.5s;
+}
+
+.buttons .btn-github:hover {
+  background: url(Images/GitHub.png);
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: 90px;
+  font-size: 20px;
+  background-color: white;
+  color: black;
+}
+
+.buttons .btn-linkedin {
+  background: url(Images/likedin.png);
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: 70px;
+  transition: 0.5s;
+}
+
+.buttons .btn-linkedin:hover {
+  background: url(Images/likedin.png);
+  background-position: 110%;
+  background-repeat: no-repeat;
+  background-size: 80px;
+  font-size: 20px;
+  background-color: white;
+  color: black;
+}
+
+/*Footer*/
+footer {
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer .logo-footer {
+  width: 50px;
+}
+
+footer .icons {
+  margin: 20px;
+}
+
+/*Media Query for smartPhone*/
+@media screen and (max-width: 700px) {
+
+  /*Header smartPhone*/
+  .header {
+    height: 50px;
+  }
+
+  .header .img-trybe {
+    align-self: center;
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Hero page SmartPhone */
+  .hero-page p {
+    margin: 15px 0px;
+    font-size: 30px;
+  }
+
+  /*About*/
+  .about {
+    flex-flow: column;
+    height: auto;
+  }
+
+  .about section {
+    margin: 5px 0px;
+    text-align: center;
+  }
+
+  .about .img-jv {
+    width: 50%;
+  }
+
+  /* Pontos Relevante*/
+  .grids {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+  }
+
+  .grids div {
+    border-bottom: 2px solid #343a40;
+  }
+
+  .grids .div-vtd,
+  .div-cle {
+    width: 100%;
+  }
+
+  /*Project*/
+
+  .div-projects {
+    flex-flow: column wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /*Contacts*/
+  .buttons-contatcs .lead {
+    width: 100%;
+    text-align: center;
+  }
+
+  .buttons-contatcs {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .buttons .btn-github,
+  .btn-linkedin {
+    width: 100%;
+  }
+
+  /*Footer*/
+  footer {
+    justify-content: space-between;
+  }
+
+  footer .logo-footer {
+    width: 20px;
+  }
+
+  .Select {
+    font-size: 30px !important;
+  }
+
+}
+
+/*Media Query for Screen small*/
+@media screen and (min-width: 700px) and (max-width: 1200px) {
+
+  /*Header screen small*/
+  .header .img-trybe {
+    align-self: center;
+    width: 6%;
+    padding: 10px;
+    width: 70px
+  }
+
+  /* Hero Page Screen small*/
+  .hero-page p {
+    font-size: 40px;
+  }
+}
+
+/*Media Query for Screen large*/
+@media screen and (min-width: 1200px) {
+
+  /*Header screen large*/
+  .header .img-trybe {
+    align-self: center;
+    padding: 10px;
+    width: 70px
+  }
+
+  /* Hero Page screen Large*/
+  .hero-page {
+    height: 1200px !important;
+  }
+
+  .hero-page p {
+    font-size: 70px;
+  }
+
+  /*About*/
+  .about .img-jv {
+    width: 15%;
+  }
 }
