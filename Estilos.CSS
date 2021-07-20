@@ -49,6 +49,7 @@ li {
   width: 100%;
   opacity: 80%;
   transition: 0.5s;
+  z-index: 1;
 }
 
 .header:hover {
