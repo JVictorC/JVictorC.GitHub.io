@@ -105,7 +105,7 @@ li {
 .about {
   display: flex;
   align-items: center;
-  height: 60vh;
+  min-height: 60vh;
 }
 
 .about section {
@@ -123,7 +123,7 @@ li {
 .menu-pontos {
   text-align: center;
   background-color: #161a1d;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 #pontos-relevantes {
@@ -185,7 +185,7 @@ li {
 /*Projects*/
 .project {
   margin: 0px 15px;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .div-projects {
@@ -260,6 +260,7 @@ li {
 #contacts {
   background-color: #212529cb;
   padding: 30px 15px;
+  min-height: 60vh;
 }
 
 .buttons-contatcs {
@@ -345,22 +346,25 @@ footer {
 footer .logo-footer {
   width: 50px;
   margin: 0px 25px;
-  animation: myAnimationFooter 3s infinite;
-}
-
-footer .name-Footer {
-  animation: myAnimationName 3s infinite;
-}
-
-@keyframes myAnimationName {
-
+  animation: myAnimationFooter infinite 5s;
 }
 
 @keyframes myAnimationFooter {
-  0% {width: 50px;}
-  25% {width: 60px;}
-  50% {transform: rotate(160deg);}
-  100% {transform: rotate(0deg);}
+  0% {
+    width: 50px;
+  }
+
+  25% {
+    width: 60px;
+  }
+
+  50% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 footer .icons {
@@ -372,13 +376,23 @@ footer .icons {
 
   /*Header smartPhone*/
   .header {
-    height: 50px;
+    height: 60px;
   }
 
   .header .img-trybe {
     align-self: center;
-    width: 50px;
-    height: 40px;
+    animation: myAnimation infinite 5s linear;
+    width: 40px;
+  }
+
+  @keyframes myAnimation {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
   }
 
   /* Hero page SmartPhone */
@@ -390,7 +404,7 @@ footer .icons {
   /*About*/
   .about {
     flex-flow: column;
-    height: auto;
+    min-height: 60vh;
   }
 
   .about section {
@@ -406,6 +420,11 @@ footer .icons {
   .links {
     width: 80%;
     margin: 20px auto;
+  }
+
+  #pontos-relevantes {
+    flex-flow: column wrap;
+    
   }
 
   .header-sections {
@@ -476,6 +495,31 @@ footer .icons {
     font-size: 23px !important;
   }
 
+  footer {
+    font-size: 18px;
+  }
+
+  footer .logo-footer {
+    width: 40px;
+  }
+
+  @keyframes myAnimationFooter {
+    0% {
+      width: 40px;
+    }
+
+    25% {
+      width: 60px;
+    }
+
+    50% {
+      transform: rotate(360deg);
+    }
+
+    100% {
+      transform: rotate(0deg);
+    }
+  }
 }
 
 /*Media Query for Screen small*/
@@ -503,14 +547,17 @@ footer .icons {
     align-self: center;
     padding: 10px;
     width: 70px;
-    animation: myAnimation 3s infinite;
+    animation: myAnimation infinite 5s linear;
   }
 
   @keyframes myAnimation {
-  0% {width: 50px;}
-  25% {width: 70px;}
-  50% {transform: rotate(160deg);}
-  100% {transform: rotateX(0deg);}
+    from {
+      transform: rotate(360deg);
+    }
+
+    to {
+      transform: rotate(0ged);
+    }
   }
 
   /* Hero Page screen Large*/
