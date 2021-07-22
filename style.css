@@ -531,8 +531,19 @@ footer .icons {
     width: 6%;
     padding: 10px;
     width: 70px;
+    animation: myAnimation infinite 5s linear;
   }
 
+  @keyframes myAnimation {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
   /* Hero Page Screen small*/
   .hero-page p {
     font-size: 40px;
