@@ -24,7 +24,7 @@ li {
   color: white !important;
   font-size: 23px !important;
   font-weight: 600 !important;
-  border-bottom:3px solid #198754;
+  border-bottom: 3px solid #198754;
   padding: 15px 0px !important;
   transition: 0.5s;
 }
@@ -50,6 +50,7 @@ li {
   opacity: 50%;
   transition: 0.5s;
   z-index: 1;
+  height: 80px;
 }
 
 .header:hover {
@@ -104,7 +105,7 @@ li {
 .about {
   display: flex;
   align-items: center;
-  height: 15%;
+  height: 60vh;
 }
 
 .about section {
@@ -122,15 +123,17 @@ li {
 .menu-pontos {
   text-align: center;
   background-color: #161a1d;
+  height: 100vh;
 }
 
 #pontos-relevantes {
   display: flex;
-  flex-flow: column;
+  flex-flow: row;
+  margin: 25px;
 }
 
 .links {
-  margin: 15px auto;
+  margin: 15px;
   padding: 10px;
   color: white;
   font-size: 20px;
@@ -139,6 +142,8 @@ li {
   opacity: 60%;
   transition: 0.5s;
   width: 50%;
+  border: 2px solid white;
+  cursor: pointer;
 }
 
 .links:hover {
@@ -180,7 +185,7 @@ li {
 /*Projects*/
 .project {
   margin: 0px 15px;
-  height: 700px;
+  height: 100vh;
 }
 
 .div-projects {
@@ -328,14 +333,34 @@ li {
 
 /*Footer*/
 footer {
-  background-color: white;
+  background-color: black;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  height: 100px;
+  color: #198754;
+  font-size: 25px;
 }
 
 footer .logo-footer {
   width: 50px;
+  margin: 0px 25px;
+  animation: myAnimationFooter 3s infinite;
+}
+
+footer .name-Footer {
+  animation: myAnimationName 3s infinite;
+}
+
+@keyframes myAnimationName {
+
+}
+
+@keyframes myAnimationFooter {
+  0% {width: 50px;}
+  25% {width: 60px;}
+  50% {transform: rotate(160deg);}
+  100% {transform: rotate(0deg);}
 }
 
 footer .icons {
@@ -352,7 +377,7 @@ footer .icons {
 
   .header .img-trybe {
     align-self: center;
-    width: 40px;
+    width: 50px;
     height: 40px;
   }
 
@@ -410,7 +435,7 @@ footer .icons {
     text-align: center;
   }
 
-  
+
   .linksProject {
     width: 95%;
     font-size: 18px;
@@ -461,7 +486,7 @@ footer .icons {
     align-self: center;
     width: 6%;
     padding: 10px;
-    width: 70px
+    width: 70px;
   }
 
   /* Hero Page Screen small*/
@@ -477,7 +502,15 @@ footer .icons {
   .header .img-trybe {
     align-self: center;
     padding: 10px;
-    width: 70px
+    width: 70px;
+    animation: myAnimation 3s infinite;
+  }
+
+  @keyframes myAnimation {
+  0% {width: 50px;}
+  25% {width: 70px;}
+  50% {transform: rotate(160deg);}
+  100% {transform: rotateX(0deg);}
   }
 
   /* Hero Page screen Large*/
