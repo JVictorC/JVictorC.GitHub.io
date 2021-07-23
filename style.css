@@ -625,6 +625,17 @@ footer .name-footer {
   .hero-page p {
     font-size: 40px;
   }
+
+  @keyframes disaberName {
+    from {
+      width: 0;
+    }
+
+    to {
+      width: 552px;
+    }
+  }
+
 }
 
 /*Media Query for Screen large*/
