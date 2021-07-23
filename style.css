@@ -100,6 +100,33 @@ li {
   margin: 15px;
 }
 
+.line {
+  border-right:6px solid white ;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.typing-animation {
+  animation: myAnimationLine 1s infinite normal, disaberName 4s 1s normal steps(26);
+}
+
+@keyframes disaberName {
+  from{
+    width: 0;
+  }to{
+    width: 75%;
+  }
+}
+
+@keyframes myAnimationLine {
+  from {
+    border-right-color:white;
+  }
+  to {
+    border-right-color:transparent;
+  }
+}
+
 /*About */
 
 .about {
@@ -375,6 +402,18 @@ footer .gif-links {
 
 footer .gif {
   width: 100px;
+}
+
+footer .name-footer {
+  animation: myAnimationName infinite 2s linear;
+}
+
+@keyframes myAnimationName {
+  from {
+    color: #198754 ;
+  } to {
+    color: white;
+  }
 }
 
 /*Media Query for smartPhone*/
