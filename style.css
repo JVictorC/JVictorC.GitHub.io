@@ -101,7 +101,7 @@ li {
 }
 
 .line {
-  border-right:6px solid white ;
+  border-right: 6px solid white;
   white-space: nowrap;
   overflow: hidden;
 }
@@ -111,19 +111,22 @@ li {
 }
 
 @keyframes disaberName {
-  from{
+  from {
     width: 0;
-  }to{
-    width: 75%;
+  }
+
+  to {
+    width: 965px;
   }
 }
 
 @keyframes myAnimationLine {
   from {
-    border-right-color:white;
+    border-right-color: white;
   }
+
   to {
-    border-right-color:transparent;
+    border-right-color: transparent;
   }
 }
 
@@ -410,8 +413,10 @@ footer .name-footer {
 
 @keyframes myAnimationName {
   from {
-    color: #198754 ;
-  } to {
+    color: #198754;
+  }
+
+  to {
     color: white;
   }
 }
@@ -446,6 +451,17 @@ footer .name-footer {
     font-size: 30px;
   }
 
+
+  @keyframes disaberName {
+    from {
+      width: 0;
+    }
+
+    to {
+      width: 416px;
+    }
+  }
+
   /*About*/
   .about {
     flex-flow: column;
@@ -469,7 +485,7 @@ footer .name-footer {
 
   #pontos-relevantes {
     flex-flow: column wrap;
-    
+
   }
 
   .header-sections {
@@ -570,7 +586,7 @@ footer .name-footer {
   footer .gif {
     width: 50px;
   }
-  
+
   footer .icons {
     display: flex;
     flex-direction: column;
@@ -604,7 +620,7 @@ footer .name-footer {
       transform: rotate(360deg);
     }
   }
-  
+
   /* Hero Page Screen small*/
   .hero-page p {
     font-size: 40px;
