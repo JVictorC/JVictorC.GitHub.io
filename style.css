@@ -367,8 +367,14 @@ footer .logo-footer {
   }
 }
 
-footer .icons {
-  margin: 20px;
+
+footer .gif-links {
+  width: 60px;
+  margin: 15px
+}
+
+footer .gif {
+  width: 100px;
 }
 
 /*Media Query for smartPhone*/
@@ -497,19 +503,20 @@ footer .icons {
 
   footer {
     font-size: 18px;
+    height: 80px;
   }
 
   footer .logo-footer {
-    width: 40px;
+    width: 30px;
   }
 
   @keyframes myAnimationFooter {
     0% {
-      width: 40px;
+      width: 30px;
     }
 
     25% {
-      width: 60px;
+      width: 50px;
     }
 
     50% {
@@ -520,6 +527,21 @@ footer .icons {
       transform: rotate(0deg);
     }
   }
+
+  footer .gif {
+    width: 50px;
+  }
+  
+  footer .icons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer .gif-links {
+    width: 40px;
+    margin: 10px
+  }
+
 }
 
 /*Media Query for Screen small*/
