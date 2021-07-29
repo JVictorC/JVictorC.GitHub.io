@@ -5,8 +5,6 @@ let $elementPrevius;
 const sectionCourse = $('.project h2')
 
 window.onload = function () {
-  // divPontosRelevantes.addEventListener('click', changeDiv)
-  // divButtons.addEventListener('click', selectDiv)
   // Codigo inspirado em um video visto no Youtube link https://www.youtube.com/watch?v=X6tGovYrQCo&ab_channel=Fl%C3%A1vioCoutinho
 
   slideUp();
